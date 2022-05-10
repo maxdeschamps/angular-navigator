@@ -12,6 +12,7 @@ import {HttpClientModule} from "@angular/common/http";
 import { UsersComponent } from './views/users/users.component';
 import {AddUserComponent} from "./components/users/add-user/add-user.component";
 import {ReactiveFormsModule} from "@angular/forms";
+import { SrcifyPipe } from './pipes/srcify.pipe';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -29,6 +30,7 @@ const routes: Routes = [
     HomeComponent,
     UsersComponent,
     AddUserComponent,
+    SrcifyPipe,
   ],
   imports: [
     HttpClientModule,

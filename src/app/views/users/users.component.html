@@ -3,7 +3,7 @@
     {{ user.firstname }} {{ user.lastname }}
   </div>
   <div class="body">
-    {{ user.framework }}
+    <img src="{{ user.framework|srcify }}" alt="{{ user.framework }}" />
   </div>
 </div>
 
