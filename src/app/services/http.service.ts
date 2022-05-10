@@ -13,4 +13,12 @@ export class HttpService {
   getItem() {
     return this.httpClient.get<Array<UserModel>>(this.apiBasePath + "/users");
   }
+
+  addUser(user: UserModel) {
+
+    return this.httpClient.post<any>(this.apiBasePath + "/users", user).subscribe(data => {
+      console.log(data)
+    })
+  }
+
 }

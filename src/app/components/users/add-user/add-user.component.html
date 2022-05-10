@@ -1,0 +1,20 @@
+<div style="padding:10px" >
+
+  <form [formGroup]="formGrpAddUser">
+
+    <label for="fname">Prénom</label>
+    <input formControlName="firstname" type="text" id="fname" name="firstname" >
+
+    <label for="lname">Nom</label>
+    <input formControlName="lastname" type="text" id="lname" name="lastname" >
+
+    <label for="lframework">Framework favori</label>
+    <input formControlName="framework" type="text" id="lframework" name="framework" placeholder="(React native n'est pas une réponse valide)" >
+
+
+    <input (click)="submitAddUser()" type="submit" value="Valider">
+  </form>
+
+</div>
+
+
