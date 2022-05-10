@@ -1,15 +1,19 @@
-<nav>
+<app-burger class="margin-right" (event)="handleMenu($event)"></app-burger>
+<header [ngClass]="{'open':open}" class="navbar">
   <div class="title">
-    <app-burger class="margin-right" (event)="handleMenu($event)"></app-burger>
-
     <h1>{{ site_title }}</h1>
   </div>
-
-  <ul [ngClass]="{'menu--open':open}" class="menu">
-    <li>
-      <a routerLink="/" [ngClass]="{'currentRoute': currentRoute == '/' || currentRoute == '/home'}">Home</a>
-      <a routerLink="/about-us" [ngClass]="{'currentRoute': currentRoute == '/about-us'}">About us</a>
-      <a routerLink="/users" [ngClass]="{'currentRoute': currentRoute == '/users'}">Users</a>
-    </li>
-  </ul>
-</nav>
+  <nav>
+    <ul class="menu">
+      <li>
+        <a routerLink="/" [ngClass]="{'current': currentRoute == '/' || currentRoute == '/home'}">Home</a>
+      </li>
+      <li>
+        <a routerLink="/about-us" [ngClass]="{'current': currentRoute == '/about-us'}">About us</a>
+      </li>
+      <li>
+        <a routerLink="/users" [ngClass]="{'current': currentRoute == '/users'}">Users</a>
+      </li>
+    </ul>
+  </nav>
+</header>
