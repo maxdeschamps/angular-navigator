@@ -6,7 +6,7 @@ import {UserModel} from "../models/user.model";
   providedIn: 'root'
 })
 export class HttpService {
-  apiBasePath = 'https://705c-92-103-197-34.eu.ngrok.io';
+  apiBasePath = 'http://localhost:3000';
 
   constructor(public httpClient: HttpClient) { }
 
@@ -15,7 +15,6 @@ export class HttpService {
   }
 
   addUser(user: UserModel) {
-
     return this.httpClient.post<any>(this.apiBasePath + "/users", user).subscribe(data => {
       console.log(data)
     })
