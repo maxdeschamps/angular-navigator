@@ -1,0 +1,14 @@
+<nav>
+  <div class="title">
+    <app-burger class="margin-right" (event)="handleMenu($event)"></app-burger>
+
+    <h1>{{ site_title }}</h1>
+  </div>
+
+  <ul [ngClass]="{'menu--open':open}" class="menu">
+    <li>
+      <a routerLink="/">Home</a>
+      <a routerLink="/about-us">About us</a>
+    </li>
+  </ul>
+</nav>
