@@ -7,8 +7,8 @@
 
   <ul [ngClass]="{'menu--open':open}" class="menu">
     <li>
-      <a routerLink="/">Home</a>
-      <a routerLink="/about-us">About us</a>
+      <a routerLink="/" [ngClass]="{'currentRoute': currentRoute == '/' || currentRoute == '/home'}">Home</a>
+      <a routerLink="/about-us" [ngClass]="{'currentRoute': currentRoute == '/about-us'}">About us</a>
     </li>
   </ul>
 </nav>
