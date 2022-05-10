@@ -44,6 +44,12 @@ nav {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0 auto;
+
+    > a {
+      text-decoration: none;
+      color: white;
+      margin-top: 10px;
+    }
   }
 
   &.menu--open {
@@ -52,12 +58,18 @@ nav {
   }
 }
 
-a {
-  text-decoration: none;
-  color: white;
-  margin-top: 10px;
-}
 
 .currentRoute {
-  border-bottom: 5px solid cornflowerblue;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: cornflowerblue;
+  }
 }
