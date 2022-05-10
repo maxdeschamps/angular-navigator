@@ -8,10 +8,13 @@ import { AboutusComponent } from './views/aboutus/aboutus.component';
 import { HomeComponent } from './views/home/home.component';
 import {RouterModule, Routes} from "@angular/router";
 import { AppComponent } from './app.component';
+import {HttpClientModule} from "@angular/common/http";
+import { UsersComponent } from './views/users/users.component';
 
 const routes: Routes = [
-  {path: 'home', component:HomeComponent},
-  {path: 'about-us', component:AboutusComponent},
+  {path: 'home', component: HomeComponent},
+  {path: 'about-us', component: AboutusComponent},
+  {path: 'users', component: UsersComponent},
   {path: '', redirectTo: 'home', pathMatch: 'full' },
 ]
 
@@ -22,8 +25,10 @@ const routes: Routes = [
     BurgerComponent,
     AboutusComponent,
     HomeComponent,
+    UsersComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     RouterModule.forRoot(routes),

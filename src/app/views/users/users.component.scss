@@ -1,0 +1,16 @@
+.user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 300px;
+  margin: 10px 0;
+  padding: 15px;
+  color: white;
+  border-radius: .25rem;
+  background-color: black;
+
+  .body {
+    text-transform: uppercase;
+  }
+}
