@@ -4,7 +4,16 @@
   <section class="body">
     <router-outlet></router-outlet>
   </section>
-
+ 
+  <sand-iframe 
+    [id]="idFrame"
+    [title]="titleIFrame"
+    [width]="widthIFrame"
+    [height]="heightIFrame"
+    [src]="src"
+    style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+    >
+  </sand-iframe>
 <!--  <sand-col colSize="6">-->
 <!--    <div col>-->
       <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true">
