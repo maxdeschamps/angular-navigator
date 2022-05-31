@@ -13,6 +13,7 @@ import { UsersComponent } from './views/users/users.component';
 import {AddUserComponent} from "./components/users/add-user/add-user.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import { SrcifyPipe } from './pipes/srcify.pipe';
+import { SandouichModule } from 'sandouich';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -38,6 +39,7 @@ const routes: Routes = [
     AppRoutingModule,
     RouterModule.forRoot(routes),
     ReactiveFormsModule,
+    SandouichModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

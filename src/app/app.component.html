@@ -1,7 +1,71 @@
 <app-navbar [currentRoute]="currentRoute"></app-navbar>
 
+<sand-container>
+  <section class="body">
+    <router-outlet></router-outlet>
+  </section>
 
-<section class="body">
-  <router-outlet></router-outlet>
-</section>
+<!--  <sand-col colSize="6">-->
+<!--    <div col>-->
+      <sand-card [displayHeader]="true" [displayBody]="true" [displayFooter]="true">
+        <div header>
+          Titre
+        </div>
+        <div content>
+          Contenu
+        </div>
+        <div footer>
+          Footer
+        </div>
+      </sand-card>
+<!--    </div>-->
+<!---->
+<!--    <div col>-->
+<!--      <sand-col colSize="6">-->
+        <sand-card [displayHeader]="true" [displayBody]="true" src="https://www.woopets.fr/assets/races/000/206/og-image/griffon-bruxellois_2.jpg">
+          <div header>
+            Titre
+          </div>
+        </sand-card>
+<!--      </sand-col>-->
+<!--    </div>-->
+<!--  </sand-col>-->
 
+
+
+  <sand-tab-group>
+    <sand-tab-item label="Menu">
+      <p>ici c'est paris</p>
+    </sand-tab-item>
+    <sand-tab-item label="Burger">
+      <p>ici c'est pas riz</p>
+    </sand-tab-item>
+  </sand-tab-group>
+
+  <sand-list>
+    <sand-list-item>Petit 1</sand-list-item>
+    <sand-list-item>Petit 2</sand-list-item>
+    <sand-list-item>Petit pied</sand-list-item>
+  </sand-list>
+
+  <sand-list [listed]="true">
+    <sand-list-item>Petit 1</sand-list-item>
+    <sand-list-item>Petit 2</sand-list-item>
+    <sand-list-item>Petit pied</sand-list-item>
+  </sand-list>
+
+  <sand-modal *ngIf="displayed">
+    <div title>
+      Titre
+    </div>
+    <div detail>
+      Mon contenu
+    </div>
+    <div action>
+      <sand-button>Valider</sand-button>
+    </div>
+  </sand-modal>
+
+  <button (click)="openModal()">Open Modal</button>
+
+</sand-container>

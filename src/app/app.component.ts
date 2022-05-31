@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router, Event, NavigationEnd} from '@angular/router';
+import { ModalService } from 'sandouich';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,9 @@ export class AppComponent {
   title = 'Site name';
 
   currentRoute: string;
+  displayed = true;
 
-  constructor(private router: Router) {
+  constructor(private router: Router, public modalService: ModalService) {
     this.currentRoute = "";
     this.router.events.subscribe((event: Event) => {
 
@@ -23,4 +25,17 @@ export class AppComponent {
     });
   }
 
+  ngOnInit(): void {
+    this.modalService.display.subscribe(s => {
+      this.displayed = s;
+    });
+  }
+
+  alert($event: boolean) {
+    this.modalService.check();
+  }
+
+  openModal() {
+    this.modalService.enable();
+  }
 }
