@@ -1,9 +1,40 @@
-<app-navbar [currentRoute]="currentRoute"></app-navbar>
-
+<sand-navbar navbarTitle="Nom du site">
+  <sand-nav-link route="/home">Home</sand-nav-link>
+  <sand-nav-link route="/about-us">About us</sand-nav-link>
+  <sand-nav-link route="/users">Users</sand-nav-link>
+</sand-navbar>
 <sand-container>
   <section class="body">
     <router-outlet></router-outlet>
   </section>
+
+  <sand-button class="info">Info</sand-button>
+  <sand-button class="success">Success</sand-button>
+  <sand-button class="warning">Warning</sand-button>
+  <sand-button class="error">Error</sand-button>
+  <sand-button class="wrong">Wrong</sand-button>
+  <sand-button>Rien</sand-button>
+
+  <sand-button class="info" [secondary]="true">Info</sand-button>
+  <sand-button class="success" [secondary]="true">Success</sand-button>
+  <sand-button class="warning" [secondary]="true">Warning</sand-button>
+  <sand-button class="error" [secondary]="true">Error</sand-button>
+  <sand-button class="wrong" [secondary]="true">Wrong</sand-button>
+  <sand-button [secondary]="true">Rien</sand-button>
+
+  <sand-button class="info" [round]="true">Info</sand-button>
+  <sand-button class="success" [round]="true">Success</sand-button>
+  <sand-button class="warning" [round]="true">Warning</sand-button>
+  <sand-button class="error" [round]="true">Error</sand-button>
+  <sand-button class="wrong" [round]="true">Wrong</sand-button>
+  <sand-button [round]="true">Rien</sand-button>
+
+  <sand-button class="info" [secondary]="true" [round]="true">Info</sand-button>
+  <sand-button class="success" [secondary]="true" [round]="true">Success</sand-button>
+  <sand-button class="warning" [secondary]="true" [round]="true">Warning</sand-button>
+  <sand-button class="error" [secondary]="true" [round]="true">Error</sand-button>
+  <sand-button class="wrong" [secondary]="true" [round]="true">Wrong</sand-button>
+  <sand-button [secondary]="true" [round]="true">Rien</sand-button>
  
   <sand-iframe 
     [id]="idFrame"
