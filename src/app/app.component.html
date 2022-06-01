@@ -4,8 +4,8 @@
   <section class="body">
     <router-outlet></router-outlet>
   </section>
- 
-  <sand-iframe 
+
+  <sand-iframe
     [id]="idFrame"
     [title]="titleIFrame"
     [width]="widthIFrame"
@@ -76,5 +76,7 @@
   </sand-modal>
 
   <button (click)="openModal()">Open Modal</button>
+
+  <sand-select [items]="items"></sand-select>
 
 </sand-container>

@@ -14,6 +14,7 @@ import {AddUserComponent} from "./components/users/add-user/add-user.component";
 import {ReactiveFormsModule} from "@angular/forms";
 import { SrcifyPipe } from './pipes/srcify.pipe';
 import { SandouichModule } from 'sandouich';
+import {SelectModule} from "ng-select";
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -33,14 +34,15 @@ const routes: Routes = [
     AddUserComponent,
     SrcifyPipe,
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(routes),
-    ReactiveFormsModule,
-    SandouichModule,
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        AppRoutingModule,
+        RouterModule.forRoot(routes),
+        ReactiveFormsModule,
+        SandouichModule,
+        SelectModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
